@@ -172,9 +172,9 @@ begin
   end;
   R := ClientRect;
   B := NewBrush(R.TopLeft, R.BottomLeft);
-  B.AddStop(clWhite, 0);
-  B.AddStop(clBack, 0.4);
-  B.AddStop(clBack, 0.75);
+  B.AddStop(Rgba(clWhite, 0.85), 0);
+  B.AddStop(Rgba(clBack, 0.7), 0.4);
+  B.AddStop(Rgba(clBack, 0.8), 0.75);
   B.AddStop(clBackDark, 1);
   Surface.Fill(B);
   for G in Layout.GetGrids do
@@ -183,9 +183,9 @@ begin
     R.Inflate(150, 100);
     R.Offset(0, 50);
     B := NewBrush(R);
-    B.AddStop(clWhite, 0);
-    B.AddStop(Mix(clWhite, clSilver, 0.2), 0.6);
-    B.AddStop(Mix(clWhite, clSilver, 0.8), 1);
+    B.AddStop(Rgba(clWhite, 0.5), 0);
+    B.AddStop(Mix(clWhite, clSilver, 0.2).Fade(0.65), 0.6);
+    B.AddStop(Mix(clWhite, clSilver, 0.8).Fade(0.8), 1);
     R := G;
     Surface.FillRect(B, R);
   end;
