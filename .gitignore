@@ -1,0 +1,19 @@
+# Lazarus and Free Pascal build output
+lib/
+backup/
+*.o
+*.ppu
+*.compiled
+*.or
+*.dbg
+*.bak
+
+# Lazarus session files
+*.lps
+
+# Compiled program
+src/cpugraph
+
+# Debian packages and their staging folders
+*.deb
+src/cpugraph_*/
