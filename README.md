@@ -55,17 +55,5 @@ possible the graph runs about two and a half seconds behind real time.
 
 ## Building
 
-CPU Graph builds with Lazarus using the GTK3 widgetset. It needs these
-packages from the [Codebot Pascal Library](https://github.com/sysrpl/Codebot.Cross),
-found in the `source` folder of that repository:
-
-* `source/codebot/codebot.lpk`
-* `source/codebot_controls/codebot_controls.lpk`
-
-Open each package in Lazarus once so the IDE knows where to find it.
-
-Open `src/cpugraph.lpi` in Lazarus, choose the **Release** build mode, and build.
-The Release mode is optimized with no debug information and stripped symbols.
-
-The project includes a Debian package description in `src/cpugraph.mkdeb` for use
-with the MakeDeb packaging tool.
+CPU Graph builds with Lazarus using the GTK3 widgetset. It depends on these
+packages from the [Codebot Pascal Library](https://github.com/sysrpl/Codebot.Cross).
